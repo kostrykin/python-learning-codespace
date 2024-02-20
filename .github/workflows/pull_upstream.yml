@@ -34,10 +34,17 @@ jobs:
           git remote add upstream https://github.com/kostrykin/python-learning-codespace
           git fetch upstream
           git merge upstream/master --allow-unrelated-histories
+
+      - name: Commit
+        id: commit
+        continue-on-error: true
+        shell: bash
+        run: |
           git commit -a -m "Update configuration"
           git push origin pull_upstream
       
       - name: Create pull request
+        if: steps.commit.outcome == 'success'
         shell: bash
         run: |
           gh pr create --fill
