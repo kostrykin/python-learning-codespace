@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # To enable updates, set this to the name of your repository:
-    if: github.event.repository.name == 'kostrykin/python-learning-codespace'
+    if: github.repository == 'kostrykin/python-learning-codespace'
 
     steps:
 
