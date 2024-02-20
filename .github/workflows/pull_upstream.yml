@@ -37,7 +37,7 @@ jobs:
         run: |
           git remote add upstream https://github.com/kostrykin/python-learning-codespace
           git fetch upstream
-          git merge upstream/master --allow-unrelated-histories
+          git merge upstream/master --allow-unrelated-histories --squash
           git commit --allow-empty -a -m "Update configuration"
           git push origin pull_upstream
       
