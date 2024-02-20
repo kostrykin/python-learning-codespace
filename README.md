@@ -4,7 +4,7 @@ This repository serves as a template for *Lessons on Image Analysis using Python
 
 **The codespace is configured as follows:**
 - VS Code with `ms-toolsai.jupyter` extension
-- Python 3.12 (should be selected as default Jupyter kernel, doesn't work all the time)
+- Python 3.12 (should be selected as default Jupyter kernel, doesn't work reliably)
 - Common Python packages for image analysis (numpy, scipy, scikit-image, tifffile, pillow)
 
 Update `.devcontainer/Dockerfile` to add Python packages to be installed.
