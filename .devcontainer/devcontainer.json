@@ -37,9 +37,11 @@
 				"files.exclude": {
 					"**/.*": true,
 					"**/*.md": true,
-					"**/LICENSE": true
+					"**/LICENSE": true,
+					"**/requirements.txt": true
 				}
-			}
+			},
+			"postCreateCommand": "pip install -r requirements.txt"
 		}
 	}
 
