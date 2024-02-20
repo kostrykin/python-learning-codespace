@@ -10,3 +10,12 @@ This repository provides a template for GitHub Codespaces to be used in [*Lesson
 Update `.devcontainer/Dockerfile` to add Python packages to be installed.
 
 Dotfiles `**/.*`, Markdown files `**/*.md` are some other auxiliary files (e.g., LICENSE) are hidden in the VS Code file manager. Pylance is disabled.
+
+**To update your existing repository with this template:**
+
+Install the auto-updater workflow:
+```bash
+mkdir -p .github/workflows && wget https://github.com/kostrykin/python-learning-codespace/raw/master/.github/workflows/pull_upstream.yml -O .github/workflows/pull_upstream.yml
+```
+
+Run the workflow from the web interface and merge the created pull request.
