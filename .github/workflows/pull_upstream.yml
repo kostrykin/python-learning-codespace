@@ -12,10 +12,12 @@ jobs:
 
   pull_upstream:
 
-    runs-on: ubuntu-latest
-
     # To enable updates, set this to the name of your repository:
     if: github.repository == 'kostrykin/python-learning-codespace'
+
+    runs-on: ubuntu-latest
+
+    permissions: contents: write
 
     steps:
 
