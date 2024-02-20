@@ -47,7 +47,7 @@ jobs:
       - name: List files with merge conflicts
         shell: bash
         run: |
-          echo "Please resolve merge conflicts within the following files:\n" >> .pr-body.md
+          echo "Please resolve merge conflicts within the following files:" >> .pr-body.md
           git diff --name-only --diff-filter=U --relative | awk '{print "- " $0}' >> .pr-body.md
 
       - name: Commit
