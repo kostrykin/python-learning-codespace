@@ -36,7 +36,8 @@
 
 				"files.exclude": {
 					"**/.*": true,
-					"**/*.md": true
+					"**/*.md": true,
+					"**/LICENSE": true
 				}
 			}
 		}
