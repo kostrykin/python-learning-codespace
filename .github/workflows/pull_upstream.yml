@@ -43,6 +43,6 @@ jobs:
       - name: Create pull request
         shell: bash
         run: |
-          gh pr create --fill
+          gh pr create --fill --head pull_upstream
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
