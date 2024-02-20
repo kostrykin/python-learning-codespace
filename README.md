@@ -1,6 +1,6 @@
 # [python-learning-codespace](https://github.com/kostrykin/python-learning-codespace)
 
-This repository serves as a template for *Lessons on Image Analysis using Python and Jupyter Notebooks* inside GitHub Codespaces.
+This repository serves as a template for [*Lessons on Image Analysis using Python and Jupyter Notebooks* in Molecular Biotechnology inside GitHub Codespaces](https://github.com/users/kostrykin/projects/4).
 
 **The codespace is configured as follows:**
 - VS Code with `ms-toolsai.jupyter` extension
