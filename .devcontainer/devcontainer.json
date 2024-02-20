@@ -1,7 +1,8 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-	"name": "Python 3",
+	"name": "Python Learning Codespace",
+	
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
 
@@ -22,7 +23,21 @@
 			],
 			"settings": { 
 				"python.linting.enabled": false,
-				"python.languageServer": "None"
+				"python.languageServer": "None",
+
+				"notebook.kernelPicker.type": "all",
+				"jupyter.kernels.filter": [
+					// This is a list of kernels to be filtered out, not included:
+					{
+						"path": "/usr/bin/python3",
+						"type": "pythonEnvironment"
+					}
+				],
+
+				"files.exclude": {
+					"**/.*": true,
+					"**/*.md": true
+				}
 			}
 		}
 	}
