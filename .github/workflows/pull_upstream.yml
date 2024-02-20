@@ -1,0 +1,43 @@
+name: Update configuration
+
+on:
+
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 1 * * 1'  ## At 01:00 AM on every Monday
+
+
+jobs:
+
+  pull_upstream:
+
+    runs-on: ubuntu-latest
+
+    # To enable updates, set this to the name of your repository:
+    if: github.event.repository.name == 'kostrykin/python-learning-codespace'
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - name: Create branch for merging
+        shell: bash
+        run: |
+          git checkout -b pull_upstream
+
+      - name: Pull from upstream
+        shell: bash
+        run: |
+          git remote add upstream https://github.com/kostrykin/python-learning-codespace
+          git fetch upstream
+          git merge upstream/master --allow-unrelated-histories
+          git commit -a -m "Update configuration"
+          git push origin pull_upstream
+      
+      - name: Create pull request
+        shell: bash
+        run: |
+          gh pr create --fill
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
