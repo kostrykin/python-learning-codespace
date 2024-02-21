@@ -15,5 +15,5 @@ Dotfiles `**/.*`, Markdown files `**/*.md` are some other auxiliary files (e.g.,
 
 This command will fetch the latest `.devcontainer` and overwrite:
 ```bash
-mkdir -p .devcontainer && cd .devcontainer && wget https://github.com/kostrykin/python-learning-codespace/raw/master/.devcontainer/devcontainer.json && wget https://github.com/kostrykin/python-learning-codespace/raw/master/.devcontainer/Dockerfile
+mkdir -p .devcontainer && wget https://github.com/kostrykin/python-learning-codespace/raw/master/.devcontainer/devcontainer.json -O .devcontainer/devcontainer.json && wget https://github.com/kostrykin/python-learning-codespace/raw/master/.devcontainer/Dockerfile -O .devcontainer/Dockerfile
 ```
