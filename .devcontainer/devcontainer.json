@@ -2,6 +2,9 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
 	"name": "Python Learning Codespace",
+	"hostRequirements": {
+		"cpus": 2
+	},
 	
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"build": {
