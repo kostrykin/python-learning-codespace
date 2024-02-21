@@ -13,9 +13,7 @@ Dotfiles `**/.*`, Markdown files `**/*.md` are some other auxiliary files (e.g.,
 
 **To update your existing repository with this template:**
 
-Install the auto-updater workflow:
+This command will fetch the latest `.devcontainer` and overwrite:
 ```bash
-mkdir -p .github/workflows && wget https://github.com/kostrykin/python-learning-codespace/raw/master/.github/workflows/pull_upstream.yml -O .github/workflows/pull_upstream.yml
+mkdir -p .devcontainer && cd .devcontainer && wget https://github.com/kostrykin/python-learning-codespace/raw/master/.devcontainer/devcontainer.json && wget https://github.com/kostrykin/python-learning-codespace/raw/master/.devcontainer/Dockerfile
 ```
-
-Run the workflow from the web interface and merge the created pull request.
